@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta property="og:image" content="anhbia.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Quà Valentines</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet"> <!-- Thêm font Cormorant Garamond -->
+    <style>
+        body {
+            background-color: #FCE8E8;
+            font-family: "Cormorant Garamond", serif; /* Sử dụng font Cormorant Garamond */
+            text-align: center;
+        }
+        .search-bar {
+            margin: 20px auto;
+            padding: 10px;
+            width: 80%;
+            background: white;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            font-weight: 300; /* Kiểu chữ mỏng nhẹ */
+        }
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 18px;
+            font-weight: 300; /* Kiểu chữ mỏng nhẹ */
+            text-align: center;
+        }
+        .banner-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px;
+        }
+        .banner {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+            min-width: 130px;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product-info {
+            background-color: #F4B5C1;
+            border-radius: 15px;
+            padding: 5px;
+            color: white;
+            margin-top: 5px;
+        }
+.product-name {
+       font-size: 14px; /* Giảm kích thước chữ */
+     word-wrap: break-word; /* Tự động xuống dòng khi không đủ chỗ */
+    white-space: normal;   /* Cho phép xuống dòng */
+    text-align: center;    /* Căn giữa nếu muốn đẹp hơn */
+}
+        .price {
+            font-size: 16px;
+            font-weight: 400; /* Font nhẹ cho giá sản phẩm */
+        }
+        .footer {
+            margin-top: 20px;
+        }
+        .footer p {
+            font-size: 50px;
+            font-weight: 300; /* Font nhẹ cho chữ footer */
+            color: #e6005c;
+        }
+        .footer a {
+            display: block;
+            margin: 5px;
+            color: #e6005c;
+            text-decoration: none;
+            font-weight: 300; /* Font nhẹ cho liên kết */
+        }
+        .footer .note {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #555;
+        }
+    .additional-info {
+        color: #e6005c;
+        font-size: 18px;
+        font-weight: 300; /* Giống với footer a */
+        text-align: left; /* Căn trái */
+        margin: 10px 20px; /* Thụt vào bên trái một chút */
+        font-style: italic; /* In nghiêng */
+    }
+
+.new-banner-container {
+    display: flex;
+    justify-content: flex-start; /* Đẩy các banner về bên trái */
+    gap: 10px; /* Khoảng cách giữa các ảnh */
+    padding: 10px 0;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    white-space: nowrap; /* Giữ các banner trên 1 dòng */
+}
+
+    .new-banner img {
+        width: 80px; /* Kích thước nhỏ gọn */
+        height: 80px; /* Tạo tỷ lệ 1:1 */
+        object-fit: cover;
+        border-radius: 15px; /* Bo góc nhẹ */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng nhẹ */
+    }
+
+    .product-name, .price {
+        color: #000; /* Màu đen */
+        font-weight: bold; /* In đậm */
+    }
+        /* CSS cho đồng hồ đếm ngược */
+        #countdown-timer {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-bar">
+        <input type="text" value="Set quà Valentines" readonly>
+       
+    </div>
+    
+<div class="banner-container">
+   <div class="banner">
+    <img src="0 (12).jpg" alt="Set cơ bản">
+    <div class="product-info">
+        <div class="product-name">Set cơ bản</div>
+        <div class="price">99k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (6).PNG" alt="Combo + Nước hoa Forment kèm case gấu">
+    <div class="product-info">
+        <div class="product-name">Combo + Nước hoa Forment kèm case gấu</div>
+        <div class="price">139k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (15).PNG" alt="Combo + Set cọ 10p">
+    <div class="product-info">
+        <div class="product-name">Combo + Set cọ 10p</div>
+        <div class="price">130k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (8).PNG" alt="Combo + Bình nước Stanley">
+    <div class="product-info">
+        <div class="product-name">Combo + Bình nước Stanley</div>
+        <div class="price">146k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (10).PNG" alt="Combo + Son dưỡng Dior">
+    <div class="product-info">
+        <div class="product-name">Combo + Son dưỡng Dior</div>
+        <div class="price">149k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (13).PNG" alt="Combo + Nước hoa Ariana Grande 30ml">
+    <div class="product-info">
+        <div class="product-name">Combo + Nước hoa Ariana Grande 30ml</div>
+        <div class="price">170k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (24).PNG" alt="Combo + Phấn mắt Dior">
+    <div class="product-info">
+        <div class="product-name">Combo + Phấn mắt Dior</div>
+        <div class="price">175k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (2).PNG" alt="Combo + Cushion YSl">
+    <div class="product-info">
+        <div class="product-name">Combo + Cushion YSl</div>
+        <div class="price">200k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (4).PNG" alt="Combo + Máy ảnh">
+    <div class="product-info">
+        <div class="product-name">Combo + Máy ảnh</div>
+        <div class="price">259k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (11).PNG" alt="Combo + Vòng pandora">
+    <div class="product-info">
+        <div class="product-name">Combo + Vòng pandora</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (18).PNG" alt="Combo + Dây chuyền Van Cleef & Arpels">
+    <div class="product-info">
+        <div class="product-name">Combo + Dây chuyền Van Cleef & Arpels</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (20).PNG" alt="Combo + Lắc tay Van Cleed & Arpels">
+    <div class="product-info">
+        <div class="product-name">Combo + Lắc tay Van Cleed & Arpels</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (21).PNG" alt="Combo + Warovski Swan">
+    <div class="product-info">
+        <div class="product-name">Combo + Warovski Swan</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (25).PNG" alt="Combo + Ví mua theo yêu cầu kèm bill">
+    <div class="product-info">
+        <div class="product-name">Combo + Ví mua theo yêu cầu kèm bill</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (26).PNG" alt="Combo + Giày od theo yêu cầu kèm bill">
+    <div class="product-info">
+        <div class="product-name">Combo + Giày od theo yêu cầu kèm bill</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (23).PNG" alt="Combo + Nước hoa od theo yêu cầu kèm bill">
+    <div class="product-info">
+        <div class="product-name">Combo + Nước hoa od theo yêu cầu kèm bill</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+
+
+</div>
+
+<div class="banner-container">
+<div class="banner">
+    <img src="0 (11).jpg" alt="Set cơ bản">
+    <div class="product-info">
+        <div class="product-name">Set cơ bản</div>
+        <div class="price">99k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (14).PNG" alt="Combo + Mediheal Pad 200p">
+    <div class="product-info">
+        <div class="product-name">Combo + Mediheal Pad 200p</div>
+        <div class="price">129k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (7).PNG" alt="Combo + Set cọ 10p">
+    <div class="product-info">
+        <div class="product-name">Combo + Set cọ 10p</div>
+        <div class="price">130k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (3).PNG" alt="Combo + Nước hoa Forment kèm case gấu">
+    <div class="product-info">
+        <div class="product-name">Combo + Nước hoa Forment kèm case gấu</div>
+        <div class="price">139k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (16).PNG" alt="Combo + Bình nước Stanley">
+    <div class="product-info">
+        <div class="product-name">Combo + Bình nước Stanley</div>
+        <div class="price">146k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (5).PNG" alt="Combo + Nước hoa soap Sennok">
+    <div class="product-info">
+        <div class="product-name">Combo + Nước hoa soap Sennok</div>
+        <div class="price">169k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (1).PNG" alt="Combo + Máy ảnh">
+    <div class="product-info">
+        <div class="product-name">Combo + Máy ảnh</div>
+        <div class="price">259k</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (9).PNG" alt="Combo + Quần áo od theo yêu cầu kèm bill">
+    <div class="product-info">
+        <div class="product-name">Combo + Quần áo od theo yêu cầu kèm bill</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (12).PNG" alt="Combo + Giày">
+    <div class="product-info">
+        <div class="product-name">Combo + Giày</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (17).PNG" alt="Combo + Tai nghe Apple">
+    <div class="product-info">
+        <div class="product-name">Combo + Tai nghe Apple</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (19).PNG" alt="Combo + Sách mua theo yêu cầu (Sách việt or Hàn đều ok)">
+    <div class="product-info">
+        <div class="product-name">Combo + Sách mua theo yêu cầu (Sách việt or Hàn đều ok)</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+
+<div class="banner">
+    <img src="0 (22).PNG" alt="Combo + Money ư oa">
+    <div class="product-info">
+        <div class="product-name">Combo + Money ư oa</div>
+        <div class="price">Tư vấn</div>
+    </div>
+</div>
+</div>
+<script>
+// Tìm tất cả các phần tử có class 'price'
+const prices = document.querySelectorAll('.price');
+
+prices.forEach(priceElement => {
+    // Lấy giá trị số từ nội dung (loại bỏ chữ 'k')
+    const currentPrice = parseFloat(priceElement.textContent.replace('k', ''));
+
+    // Tính giá gốc (tăng 10%)
+    const originalPrice = (currentPrice * 1.1).toFixed(0); // Làm tròn số nguyên
+
+    // Tạo phần tử giá gốc
+    const originalPriceElement = document.createElement('div');
+    originalPriceElement.innerHTML = `<s style="color: gray; font-size: 14px;">${originalPrice}k</s> <span style="color: red; font-size: 12px;">(Đã giảm 10%)</span>`;
+
+    // Thêm giá gốc phía trên giá đã giảm
+    priceElement.parentNode.insertBefore(originalPriceElement, priceElement);
+});
+</script>
+<div class="additional-info">
+   -  Set cơ bản có giá cố định 99k, nếu muốn bỏ set đồ lót ra thì shop chỉ giảm 4k thôi ạ.<br>
+   - Còn lại là sản phẩm shop giới thiệu thêm cho ai không biết nên tặng gì.
+</div>
+
+<div class="additional-info">
+    - Có thể mua một set quà cơ bản thôi là đầy đủ 9 món quà rồi nhé ạ.<br>
+    - Nếu muốn shop đặt dùm và gói vào làm combo luôn thì nhắn giúp shop trước 3 ngày để shop đặt dùm nhé ạ.
+</div>
+
+<div class="additional-info">
+    - Sau đây là cách gói quà siêu đơn giản mà đẹp và sang của shop đây ạ:
+</div>
+<!-- Đồng hồ đếm ngược -->
+<div id="countdown-timer">
+        ⏰ Khuyến mãi kết thúc sau: <span id="timer">00:00:00</span>
+    </div>
+
+    <!-- Thay đoạn script này -->
+    <script>
+        function startCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999);
+
+            const timerElement = document.getElementById('timer');
+
+            function updateCountdown() {
+                const currentTime = new Date();
+                const remainingTime = endOfDay.getTime() - currentTime.getTime();
+
+                if (remainingTime > 0) {
+                    const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+                    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+                    timerElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes
+                        .toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                } else {
+                    timerElement.textContent = 'Đã hết hạn!';
+                    clearInterval(countdownInterval);
+                }
+            }
+
+            updateCountdown();
+            const countdownInterval = setInterval(updateCountdown, 1000);
+        }
+
+        startCountdown();
+    </script>
+
+<div class="new-banner-container">
+    <div class="new-banner"><img src="0 (5).JPG" alt="Banner 1"></div>
+    <div class="new-banner"><img src="0 (6).JPG" alt="Banner 2"></div>
+    <div class="new-banner"><img src="0 (3).JPG" alt="Banner 3"></div>
+    <div class="new-banner"><img src="0 (2).JPG" alt="Banner 4"></div>
+    <div class="new-banner"><img src="0 (1).JPG" alt="Banner 5"></div>
+    <div class="new-banner"><img src="0 (4).JPG" alt="Banner 6"></div>
+    <div class="new-banner"><img src="0 (7).JPG" alt="Banner 7"></div>
+    <div class="new-banner"><img src="0 (10).JPG" alt="Banner 8"></div>
+</div>
+   
+    <div class="footer">
+        <p>JANG YEIN</p>
+        <a href="https://open.kakao.com/o/si93G65f">Kakaotalk</a>
+        <a href="https://www.facebook.com/share/1Ay66yCvPf/?mibextid=wwXIfr">Facebook</a>
+        <p class="note">Để xem thêm mẫu và tư vấn về giá thì liên hệ em qua link ở trên nhé ạ</p>
+    </div>
+</body>
+</html>
