@@ -130,6 +130,34 @@
             font-size: 16px;
             z-index: 1000;
         }
+        }
+        .review-title {
+            font-size: 14px;
+            text-align: center;
+            margin: 20px 0;
+            color: #555;
+        }
+        .review-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+        .review-item {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .review-item img {
+            width: 100%;
+            display: none;
+        }
+        .review-item.visible img {
+            display: block;
+        }
     </style>
 </head>
 
@@ -424,7 +452,32 @@ prices.forEach(priceElement => {
     <div class="new-banner"><img src="0 (4).JPG" alt="Banner 6"></div>
     <div class="new-banner"><img src="0 (7).JPG" alt="Banner 7"></div>
 </div>
-   
+<div class="review-title">Review</div>
+    <div class="review-grid">
+        <div class="review-item"><img src="gif1.gif" class="lazy-gif"></div>
+        <div class="review-item"><img src="gif2.gif" class="lazy-gif"></div>
+        <div class="review-item"><img src="gif3.gif" class="lazy-gif"></div>
+        <div class="review-item"><img src="gif4.gif" class="lazy-gif"></div>
+        <div class="review-item"><img src="gif5.gif" class="lazy-gif"></div>
+        <div class="review-item"><img src="gif6.gif" class="lazy-gif"></div>
+        <div class="review-item"><img src="gif7.gif" class="lazy-gif"></div>
+        <div class="review-item"><img src="gif8.gif" class="lazy-gif"></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll(".review-item").forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>   
     <div class="footer">
         <p>JANG YEIN</p>
         <a href="https://open.kakao.com/o/si93G65f">Kakaotalk</a>
