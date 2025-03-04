@@ -390,7 +390,7 @@ prices.forEach(priceElement => {
 
     // Tạo phần tử giá gốc
     const originalPriceElement = document.createElement('div');
-    originalPriceElement.innerHTML = `<s style="color: gray; font-size: 14px;">${originalPrice}k</s> <span style="color: red; font-size: 12px;">(Đã giảm 10%)</span>`;
+    originalPriceElement.innerHTML = `<s style="color: gray; font-size: 14px;">${originalPrice}k</s> <span style="color: red; font-size: 12px;">(Giảm 10%)</span>`;
 
     // Thêm giá gốc phía trên giá đã giảm
     priceElement.parentNode.insertBefore(originalPriceElement, priceElement);
@@ -409,43 +409,7 @@ prices.forEach(priceElement => {
 <div class="additional-info">
     - Gói quà siêu đơn giản, đẹp và sang của shop đây ạ:
 </div>
-<!-- Đồng hồ đếm ngược -->
-<div id="countdown-timer">
-        ⏰ Khuyến mãi kết thúc sau: <span id="timer">00:00:00</span>
-    </div>
 
-    <!-- Thay đoạn script này -->
-    <script>
-        function startCountdown() {
-            const now = new Date();
-            const endOfDay = new Date();
-            endOfDay.setHours(23, 59, 59, 999);
-
-            const timerElement = document.getElementById('timer');
-
-            function updateCountdown() {
-                const currentTime = new Date();
-                const remainingTime = endOfDay.getTime() - currentTime.getTime();
-
-                if (remainingTime > 0) {
-                    const hours = Math.floor(remainingTime / (1000 * 60 * 60));
-                    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-                    timerElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes
-                        .toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                } else {
-                    timerElement.textContent = 'Đã hết hạn!';
-                    clearInterval(countdownInterval);
-                }
-            }
-
-            updateCountdown();
-            const countdownInterval = setInterval(updateCountdown, 1000);
-        }
-
-        startCountdown();
-    </script>
 
 <div class="new-banner-container">
     <div class="new-banner"><img src="0 (5).JPG" alt="Banner 1"></div>
