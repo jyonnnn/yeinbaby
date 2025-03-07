@@ -162,6 +162,32 @@
         .review-item.visible img {
             display: block;
         }
+                .social-sidebar {
+            position: fixed;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .social-sidebar a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .social-sidebar a:hover {
+            transform: scale(1.1);
+        }
+        .social-sidebar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
     </style>
 </head>
 
@@ -451,6 +477,20 @@ prices.forEach(priceElement => {
         <a href="https://open.kakao.com/o/si93G65f">Kakaotalk</a>
         <a href="https://www.facebook.com/share/1Ay66yCvPf/?mibextid=wwXIfr">Facebook</a>
         <p class="note">Để xem thêm mẫu và tư vấn về giá thì liên hệ em qua link ở trên nhé ạ</p>
+    </div>
+        <div class="social-sidebar">
+        <a href="https://m.me/100012023918257" target="_blank">
+            <img src="icon3.jpg" alt="Messenger">
+        </a>
+        <a href="https://www.instagram.com/yein_babyy?igsh=Y3R1ZXVlNmZpNGRm" target="_blank">
+            <img src="icon2.jpg" alt="Instagram">
+        </a>
+        <a href="https://open.kakao.com/o/sOrIyekh" target="_blank">
+            <img src="icon1.jpg" alt="KakaoTalk">
+        </a>
+        <a href="https://www.tiktok.com/@yeinbabie?_t=ZS-8uTal4MnCBW&_r=1" target="_blank">
+            <img src="icon4.jpg" alt="TikTok">
+        </a>
     </div>
 </body>
 </html>
